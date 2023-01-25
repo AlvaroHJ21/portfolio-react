@@ -1,0 +1,141 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --color-primario: #1073ba;
+  --color-secundario: #00da55;
+  --color-primario-hover: #0b5991;
+  --color-secundario-hover: #008b35;
+
+  font-family: "Raleway", Inter, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(255, 255, 255, 0.87);
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  background-color: #171717;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  place-items: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+      color: #213547;
+      background-color: #ffffff;
+  }
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  width: 100%;
+}
+
+/* Utilidades */
+
+.container {
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.degradado-verde {
+  color: transparent;
+  background-image: linear-gradient(
+      to right,
+      var(--color-primario) 0%,
+      var(--color-secundario) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.underline-degradated::after {
+  display: block;
+  width: 10rem;
+  height: 0.5rem;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      var(--color-primario) 0%,
+      var(--color-secundario) 100%
+  );
+  border-radius: 1rem;
+  content: "";
+}
+
+.btn-icon {
+  display: flex;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  line-height: 0;
+  cursor: pointer;
+  background-color: #242424;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+
+}
+
+.btn-icon:hover {
+  background-color: #6b6b6b;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-image: linear-gradient(
+      to right,
+      var(--color-primario) 0%,
+      var(--color-secundario) 100%
+  );
+  border: none;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background-image: linear-gradient(
+      to right,
+      var(--color-primario-hover) 0%,
+      var(--color-secundario-hover) 100%
+  );
+}
