@@ -58,7 +58,13 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  /* max-width: 100%; */
+}
+
+button{
+  border: none;
+  background: transparent;
+  outline: none;
 }
 
 #root {
@@ -138,4 +144,9 @@ img {
       var(--color-primario-hover) 0%,
       var(--color-secundario-hover) 100%
   );
+}
+
+
+.text-center{
+  text-align: center;
 }

@@ -1,11 +1,12 @@
 import './App.css';
-import { Header, Portfolio, Tecnologies, Footer } from './components';
+import { Header, Proyects, Tecnologies, Footer } from './components';
+import { TabProyects } from './components/TabProyects';
 
 function App() {
     return (
         <>
             <Header />
-            <Portfolio />
+            <Proyects />
             <Tecnologies />
             <Footer />
         </>

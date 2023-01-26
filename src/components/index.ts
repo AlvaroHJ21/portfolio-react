@@ -1,4 +1,4 @@
 export * from './Footer';
 export * from './Header';
-export * from './Portfolio';
+export * from './Proyects';
 export * from './Tecnologies';

@@ -1,7 +1,16 @@
 .header {
   position: relative;
   margin-bottom: 5rem;
+
+  /* background-color: #000; */
+  /* background-image: url(./assets/leon.png); */
+  /* background-repeat: no-repeat; */
+  /* background-position: right bottom; */
 }
+
+
+
+
 
 /* ------------ Navbar -------------*/
 .navbar {
@@ -82,9 +91,11 @@
   flex-direction: column;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .header__container {
     padding-top: 0;
+    flex-direction: row;
+    gap: 5rem;
   }
 }
 
@@ -111,6 +122,7 @@
   display: flex;
   margin-bottom: 2rem;
   gap: 5rem;
+  justify-content: center;
 }
 
 .social-link {
@@ -119,10 +131,37 @@
 }
 
 .header__perfil {
-  width: 30rem;
-  overflow: hidden;
+  margin-top: 6rem;
+  height: 30rem;
+  min-width: 30rem;
   border-radius: 50%;
   animation: animate 2s ease;
+  background-color: #09959f;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .header__perfil {
+    height: 40rem;
+    min-width: 40rem;
+    border-radius: 50%;
+  }
+}
+
+.header__perfil img{
+  width: 30rem;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 15rem;
+  border-bottom-right-radius: 15rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header__perfil img{
+    width: 40rem;
+    border-bottom-left-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+  }
 }
 
 @keyframes animate {
@@ -137,7 +176,7 @@
 
 /* ------------ Fin del contenido del header -------------*/
 
-/* ------------ Portafolio -------------*/
+/* ------------ Proyectos -------------*/
 .portfolio {
   margin-bottom: 5rem;
 }
@@ -165,6 +204,7 @@
 
 .card {
   position: relative;
+  height: 28rem;
   overflow: hidden;
   cursor: pointer;
   border-radius: 0.5rem;
@@ -179,8 +219,14 @@
 }
 
 .card__img {
-  /* border: 1px solid red; */
+  height: 100%;
   transition: transform 0.2s ease;
+}
+
+.card__img img{
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card__body {
@@ -188,8 +234,8 @@
   top: 100%;
   display: flex;
   width: 100%;
-  height: 101%;
-  padding: 2rem 4rem;
+  height: 100%;
+  padding: 2rem 0;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
@@ -201,33 +247,30 @@
 
 @media screen and (min-width: 576px) {
   .card__body {
-    padding: 2rem 4rem;
-    font-size: 1rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
+    font-size: 1rem;
+    flex-direction: column;
   }
+}
+
+.card__body h3{
+  font-size: 2rem;
 }
 
 .card__body p {
-  width: 40rem;
+  width: 80%;
+  height: 0;
+  overflow-y: scroll;
   font-size: 1.2rem;
   text-align: justify;
+  flex-grow: 1;
 }
-
-@media screen and (min-width: 768px) {
-  .card__body p {
-    width: 30rem;
-    height: 80px;
-    overflow-y: scroll;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .card__body p {
     width: 50rem;
-    font-size: 1.2rem;
     overflow-y: hidden;
+    font-size: 1.2rem;
   }
 }
 
@@ -279,10 +322,16 @@
   transition: all 0.2s ease;
 }
 
+.tecnologies__item img{
+  max-width: 100%;
+}
+
 .tecnologies__item:hover {
   filter: grayscale(0);
   transform: scale(1.2);
 }
+
+
 
 /*--------------- Footer--------------- */
 
@@ -294,4 +343,32 @@
   display: flex;
   padding: 1rem 0;
   justify-content: center;
+}
+
+
+/** Tabs **/
+
+.tabs{
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* .tabs::-webkit-scrollbar {
+  display: none;
+} */
+
+.tab{
+  color: white;
+  max-width: 20rem;
+  flex: 1;
+  padding: 2rem 0;
+  cursor: pointer;
+}
+
+.tab:hover,
+.tab.active {
+  box-shadow: 0px 4px 0px var(--color-primario);
 }
